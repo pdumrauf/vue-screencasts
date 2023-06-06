@@ -3,7 +3,11 @@
     <h1>Videos</h1>
     <div class="video-container">
       <div v-for="video in videos" :key="video.name" class="video-box">
-        <h3>{{ video.name }}</h3>
+        <img src="https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_1280.jpg" alt="video-thumbnail">
+        <div>
+          <h3>{{ video.name }}</h3>
+          <div v-html="video.description"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -63,3 +67,21 @@ export default {
   }
 }
 </script>
+
+<style scoped lang="scss">
+  .video-container {
+    .video-box {
+      display: flex;
+      border: 1px solid black;
+      border-radius: 10px;
+      margin: 10px;
+      padding: 10px;
+      text-align: left;
+
+      img {
+        max-height: 150px;
+        padding: 10px;
+      }
+    }
+  }
+</style>
