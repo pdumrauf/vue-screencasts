@@ -11,7 +11,7 @@
     name: 'VideoWatchView',
     computed: {
       video() {
-        return this.$store.state.videos.find(video => video.name === this.$store.state.id)
+        return this.$store.state.videos.find(video => video.name === this.$route.params.id)
       }
     }
   }
