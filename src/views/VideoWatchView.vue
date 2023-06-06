@@ -18,5 +18,7 @@
 </script>
 
 <style lang="scss" scoped>
-
+  img {
+    max-width: 50%;
+  }
 </style>
