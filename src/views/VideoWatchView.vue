@@ -1,8 +1,8 @@
 <template>
   <div>
     <video-player class="video-player-box"
-                 ref="videoPlayer"
-                 :options="playerOptions">
+                  ref="videoPlayer"
+                  :options="playerOptions">
     </video-player>
     <h1>{{ video.name }}</h1>
     <div v-html="video.description"></div>
@@ -37,6 +37,16 @@ import { videoPlayer } from 'vue-video-player'
   }
 </script>
 
-<style lang="scss" scoped>
-
+<style lang="scss">
+  .video-player-box {
+    .video-js {
+      width: 80%;
+      margin: auto;
+      height: 700px;
+    }
+    .vjs-poster {
+      background-size: cover;
+      width: 100%;
+    }
+  }
 </style>
